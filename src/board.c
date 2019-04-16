@@ -110,3 +110,21 @@ void move()
     desk[Y2][X2] = desk[Y1][X1];
     desk[Y1][X1] = ' ';
 }
+int checkY()
+{
+    int i, c1 = Y1, c2 = Y2;
+    if (X1 != X2) {
+        return 0;
+    }
+    if (Y1 > Y2) {
+        c1 = Y2;
+        c2 = Y1;
+    }
+    for (i = c1 + 1; i < c2; i++) {
+        if ((desk[i][X1] > 'a' && desk[i][X1] < 's')
+            || (desk[i][X1] > 'A' && desk[i][X1] < 'S')) {
+            return 0;
+        }
+    }
+    return 1;
+}
