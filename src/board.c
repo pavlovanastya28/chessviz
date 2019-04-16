@@ -79,3 +79,29 @@ int white()
         break;
  return 0;
 }
+int black()
+{
+    if ((desk[Y2][X2] > 'a') && (desk[Y2][X2] < 's')) {
+        return 0; //не рубим своих
+    }
+    switch (desk[Y1][X1]) {
+    case 'p':
+        if ((input[2] == '-') && (desk[Y2][X2] != ' ')) {
+            printf("Вроде надо рубить?\n");
+            break;
+        }
+        if ((desk[Y2][X2] == ' ') && (Y1 == 6) && (X1 == X2) && (Y1 - Y2 > 0)
+            && (Y1 - Y2 < 3) && checkY()) {
+            return 1; //начальный ход
+        }
+        if ((desk[Y2][X2] == ' ') && (X2 == X1) && (Y1 - Y2 == 1)) {
+            transformPawn();
+            return 1; //ход по пустым клеткам
+        }
+        if ((desk[Y2][X2] < 'S' && desk[Y2][X2] > 'A')
+            && ((X1 - X2 == 1) || (X1 - X2 == -1)) && (Y1 - Y2 == 1)) {
+            return 1; //рубим чужих
+        }
+        break;
+return 0;
+}
