@@ -1,31 +1,19 @@
+#include "board.h"
+#include "board_print_plain.h"
 #include <stdio.h>
 
-void showboard(char board[8][8])
-{
-    int i,j;
-    printf("\n");
-    for (i = 7; i >= 0; i--) {
-        printf("%d|", i + 1);
-        for (j = 0; j < 8; j++) {
-            printf(" %c", board[i][j]);
-        }
-    printf("\n");
-    }
-    printf("   _______________\n");
-    printf("   A B C D E F G H\n");
-}
+char input[7];
+int X1, X2, Y1, Y2;
+char desk[8][8] = {{'R', 'N', 'B', 'K', 'Q', 'B', 'N', 'R'},
+                   {'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
+                   {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+                   {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+                   {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+                   {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+                   {'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
+                   {'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'}};
 
-int main()
-{
-	char board[8][8] = {
- 		"rnbqkbnr",
- 		"pppppppp",
- 		"........",
- 		"........",
- 		"........",
- 		"........",
- 		"PPPPPPPP",
- 		"RNBQKBNR" };
-    showboard(board);
-    return 0;
-};
+int main() {
+
+return 0;
+}
