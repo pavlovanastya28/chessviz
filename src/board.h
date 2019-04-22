@@ -11,4 +11,3 @@ int checkWIn(int status);
 void transformPawn();
 
 #endif
-
