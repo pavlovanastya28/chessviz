@@ -149,6 +149,37 @@ int checkX()
     return 1;
 }
 
+int checkD()
+{
+    int i, j, c1 = Y2, c2 = Y1, ci, cj;
+    if (((Y2 - Y1) != (X2 - X1)) && ((Y2 - Y1) != (X1 - X2))) {
+        return 0;
+    }
+    if (Y2 > Y1) {
+        c1 = Y1;
+        c2 = Y2;
+        ci = 1;
+    } else {
+        ci = -1;
+    }
+    if (X2 > X1) {
+        cj = 1;
+    } else {
+        cj = -1;
+    }
+    i = Y1 + ci;
+    j = X1 + cj;
+    while ((i < c2) && (i > c1)) {
+        if (((desk[i][j] > 'a') && (desk[i][j] < 's'))
+            || ((desk[i][j] > 'A') && (desk[i][j] < 'S'))) {
+            return 0;
+        }
+        i += ci;
+        j += cj;
+    }
+    return 1;
+}
+
 void transformPawn() {
   char npawn;
   if ((desk[Y1][X1] == 'p') && (Y2 == 0)) {
