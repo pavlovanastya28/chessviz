@@ -374,4 +374,3 @@ int checkWIn(int status) {
 
   return 0;
 }
-

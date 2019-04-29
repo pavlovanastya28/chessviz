@@ -17,4 +17,3 @@ void printdesk() {
     printf("%c ", i + 97);
   printf("\n");
 }
-
