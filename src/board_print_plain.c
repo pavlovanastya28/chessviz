@@ -3,8 +3,7 @@
 
 extern char desk[8][8];
 
-void printdesk()
-{
+void printdesk() {
     int i, j;
     for (i = 7; i >= 0; i--) {
         printf("%d ", i + 1);
