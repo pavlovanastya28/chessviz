@@ -26,4 +26,4 @@ build/test/board_test.o: test/board_test.c
 .PHONY: clean
 
 clean:
-	rm -rf build/*.o
+	rm -rf build/src/*.o && rm -rf build/test/*.o
