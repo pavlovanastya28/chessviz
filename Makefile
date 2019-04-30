@@ -1,5 +1,7 @@
-all: bin/chessviz bin/chessviz-test
+all: bin  bin/chessviz bin/chessviz-test
 
+bin: 
+	mkdir -p bin
 bin/chessviz: build/src/main.o build/src/board_print_plain.o build/src/board.o
 	gcc -Wall -Werror build/src/main.o build/src/board_print_plain.o build/src/board.o -o bin/chessviz
 
