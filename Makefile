@@ -1,7 +1,7 @@
 all: bin/chessviz bin/chessviz-test
 
 bin/chessviz: build/src/main.o build/src/board_print_plain.o build/src/board.o
-        gcc -Wall -Werror build/src/main.o build/src/board_print_plain.o build/src/board.o -o bin/chessviz
+	gcc -Wall -Werror build/src/main.o build/src/board_print_plain.o build/src/board.o -o bin/chessviz
 
 build/src/main.o: src/main.c
 	gcc -Wall -Werror -c src/main.c -o build/src/main.o
@@ -21,7 +21,6 @@ build/test/main.o: test/main.c
 
 build/test/board_test.o: test/board_test.c
 	gcc -I thirdparty -Wall -Werror -c test/board_test.c -o build/test/board_test.o
-
 
 .PHONY: clean
 
